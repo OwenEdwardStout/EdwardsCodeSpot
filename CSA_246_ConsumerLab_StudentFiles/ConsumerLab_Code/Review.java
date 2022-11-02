@@ -18,7 +18,7 @@ public class Review {
   private static final String SPACE = " ";
   //main
   public static void main(String[]args){
-    System.out.println(totalSentiment("/workspace/EdwardsCodeSpot/CSA_246_ConsumerLab_StudentFiles/ConsumerLab_Code/simpleReview.txt"));
+    System.out.println(starRating("/workspace/EdwardsCodeSpot/CSA_246_ConsumerLab_StudentFiles/ConsumerLab_Code/simpleReview.txt"));
   }
   public static double totalSentiment(String fileName){
     double currentSentiment = 0;
@@ -35,6 +35,26 @@ public class Review {
     }
     }
     return currentSentiment;
+  }
+  public static int starRating(String fileName){
+    int stars;
+   
+     if (totalSentiment(fileName) >= 10){
+    stars = 100;
+    } else if (totalSentiment(fileName) >= 5){
+      stars = 5;
+    }else if (totalSentiment(fileName) >= 2.5){
+      stars = 4;
+    }  else if (totalSentiment(fileName) <= -2.5){
+      stars = 2;
+    } else if (totalSentiment(fileName) <= -5){
+      stars = 1;
+    } else if (totalSentiment(fileName) <= -10){
+      stars = -100;
+    } else {
+      stars = 3;
+    }
+    return stars;
   }
   static{
     try {
