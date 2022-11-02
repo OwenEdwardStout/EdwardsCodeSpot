@@ -20,6 +20,7 @@ public class Review {
   public static void main(String[]args){
     System.out.println(starRating("/workspace/EdwardsCodeSpot/CSA_246_ConsumerLab_StudentFiles/ConsumerLab_Code/simpleReview.txt"));
   }
+  //takes a file and insolates the words adding the values
   public static double totalSentiment(String fileName){
     double currentSentiment = 0;
     String review = textToString(fileName);
@@ -35,6 +36,7 @@ public class Review {
     }
     }
     return currentSentiment;
+    //takes a vale from total sentiment and then uses it to generate a star rating
   }
   public static int starRating(String fileName){
     int stars;
@@ -55,6 +57,10 @@ public class Review {
       stars = 3;
     }
     return stars;
+  }
+  //generates a fake review from real
+  public static String fakeReview(String fileName){
+
   }
   static{
     try {
