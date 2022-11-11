@@ -1,4 +1,6 @@
+import java.util.Scanner;
 public class Player{
+    Scanner sc = new Scanner(System.in);
     String checkGuess(String e, String f){
         String postGuess = "";
         for(int i = 0; i< f.length(); i++){
@@ -11,5 +13,9 @@ public class Player{
             }
         }
         return postGuess;
+    }
+    String promptGuess(){
+        System.out.println("Alright bud, go ahead and guess a letter!");
+        String guess = sc.nextLine();
     }
 }
