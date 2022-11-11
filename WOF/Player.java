@@ -14,8 +14,5 @@ public class Player{
         }
         return postGuess;
     }
-    String promptGuess(){
-        System.out.println("Alright bud, go ahead and guess a letter!");
-        String guess = sc.nextLine();
-    }
+
 }
