@@ -5,7 +5,7 @@ public class Board{
 
 
 
- private String loadPhrase()
+ String loadPhrase()
   {
     String tempPhrase = "";
     
