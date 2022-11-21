@@ -7,10 +7,11 @@ public class Runner {
         String using = board.loadPhrase();
         System.out.println(using);
         System.out.println(board.replacePhrase(using));
-
+        if(true){
             System.out.println("Alright bud, go ahead and guess a letter!");
             String guess = sc.nextLine();
             
         System.out.println(player.checkGuess(guess, using));
+        }
     }
 }
