@@ -9,14 +9,13 @@ public class Player {
         System.out.println("-----------------------------");
     }
 
-    //TO DO
-    public void/*Change to appropriate data type, not void*/ getScore(){
-     
+    //TO DO - DONE
+    public int getScore(){
+        return score;
     }
-    //TO DO
-    public void/*Change to appropriate data type, not void*/ getName(){
-
-      
+    //TO DO - DONE
+    public String getName(){
+        return name;
     }
 
     public void adjustScore(int x){

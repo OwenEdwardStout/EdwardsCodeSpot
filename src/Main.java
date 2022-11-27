@@ -2,10 +2,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-
+        String p1Name;
+        String p2Name;
         //Asks the user to input thier name for the player
         System.out.println("What is player1's name?: ");
         //TO DO: Create Player 1
+        p1Name = sc.nextLine();
+        Player p1(p1Name);
 
         //Asks the user to input their name for the player.
         System.out.println("What is player2's name?: ");
@@ -18,7 +21,7 @@ public class Main {
         while (!again.equals("q")){
             //Generates the game
             //TO DO: Create "game"
-
+            Game(p1,p2)
             //TO DO: Set the a random player as the current player
             
 
