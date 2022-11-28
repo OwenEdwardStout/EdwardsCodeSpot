@@ -9,14 +9,14 @@ public class Game {
     //Sets up the game with a random amount of pieces between 10 and 50
     //Sets up the players so they can be accessed
     public Game(Player p1, Player p2){
-        pieces = (int)Math.random()*40+10;
+        pieces = (int)(Math.random()*40+10);
         this.p1 = p1;
         this.p2 = p2;
     }
 
     //Allows a player to take a specific amount of pieces.
     //Adds the amount of pieces taken to the user's score.
-    public int takePiece(){
+    public void takePiece(){
         System.out.println("There are "+ pieces+" remaining!");
         int take = 0;
        //TO DO: Grab the user amount of pieces and repeat if it not allowed. - DONE
@@ -27,10 +27,10 @@ public class Game {
         //TO DO: Adjust the pieces
 
         pieces -= take;
+        currentPlayer.adjustScore(take);
 
-        System.out.println("There are "+ pieces+" remaining!");
+
         System.out.println("-----------------------");
-        return take;
     }
 
     
@@ -49,7 +49,7 @@ public class Game {
     public boolean isLegal(int x){
 
         //TO DO - DONE
-        if(x<=pieces*0.5 && x>0){
+        if(x<=pieces*0.5 && x>0 || x==1){
             return true;}
         else{
             return false;
@@ -60,8 +60,8 @@ public class Game {
     //DO NOT CHANGE
     public boolean isComplete(){
 
-        if (pieces == 0){ return true;}
-        return false;
+        if (pieces <= 0){ return true;} else{
+        return false;}
     }
 
     //DO NOT CHANGE
