@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class FortuneTeller {
     Scanner sc = new Scanner(System.in);
-    public void introScript1(){
-        String answer;
+    String answer;
+    public int introScript1(){
         System.out.println("\n\n\n--------------------------------------------------------------------------------\nHello weary traveler! Please take some time to rest your head. Allow me to read into your future...\n(Enter to continue)");
         answer = sc.nextLine();
         System.out.println("Alright traveler, I have a proposition to make. Just so that I can get as accurate a fortune for you as possible. I'll ask you quesitons and you respond. Depending on your response I'll be able to give you the best read possible. Is that fine?");
@@ -15,11 +15,30 @@ public class FortuneTeller {
         answer = sc.nextLine();
         if(answer.equals("yes")||answer.equals("Yes")){
             System.out.println("end");
+            return 1;
         }else
         if(answer.equals("no")||answer.equals("No")){
             System.out.println("end");
+            return 2;
         }else{
             System.out.print("Look. I'll be honest this wasn't supposed to be that hard. You were just supposed to say yes or no. I don't know how you've even managed to fail this. I don't need to be a fortune teller to tell you that you ain't goin far chief.");
+            return 3;
         }
+    }
+    public int midScript1(){
+        int correctTotal = 0;
+        System.out.println("Great! Let's get started right away. Suppose you wanted to print something. The statement you would use is System.out.print() correct?");
+        answer = sc.nextLine();
+        if(answer.equals("yes")||answer.equals("Yes")){
+            correctTotal++;
+        }
+        return correctTotal;
+    }
+    public int quiz(){
+        int questionTotal = 0;
+        while(int x = 0; x <= 3; x++){
+           
+        }
+        return questionTotal;
     }
 }
