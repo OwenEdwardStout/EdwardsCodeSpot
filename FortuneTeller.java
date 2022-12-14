@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class FortuneTeller {
+    
     Scanner sc = new Scanner(System.in);
     String answer;
     public int introScript1(){
@@ -7,7 +8,7 @@ public class FortuneTeller {
         answer = sc.nextLine();
         System.out.println("Alright traveler, I have a proposition to make. Just so that I can get as accurate a fortune for you as possible. I'll ask you quesitons and you respond. Depending on your response I'll be able to give you the best read possible. Is that fine?");
         answer = sc.nextLine();
-        System.out.println("Yeah just like that! I mean " + answer + " was a bit of a strange response... But at least you get how it works now. Go for yes or no if I ask you a question that merits one of those responses.");
+        System.out.println("Yeah just like that! I mean " + answer + " was a bit of a strange response... But at least you get how it works now. Go for yes or no in the future. And if the question is a true or false sort yes is true and no is false.");
         answer = sc.nextLine();
         System.out.println("Look I'll be honest. The money isn't great for this job anymore so I've had to pick up a bit of a side job.");
         answer = sc.nextLine();
@@ -34,11 +35,5 @@ public class FortuneTeller {
         }
         return correctTotal;
     }
-    public int quiz(){
-        int questionTotal = 0;
-        while(int x = 0; x <= 3; x++){
-           
-        }
-        return questionTotal;
-    }
+
 }
