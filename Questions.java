@@ -10,20 +10,24 @@ public class Questions {
     while(acceptedInput==false){
     if (x.equals("yes")||x.equals("Yes")){
         answer = true;
+        acceptedInput=true;
     } else if (x.equals("no")||x.equals("No")){
         answer = false;
+        acceptedInput=true;
     } else{
-        System.out.println("Please typre yes or no man I was pretty clear earler.");
+        System.out.println("WHAT ABOUT YES OR NO DIDN'T YOU UNDERSTAND");
+
     }
 }
 return answer;
     }
     public int quiz(){
         int correctTotal = 0;
-        for(int x = 0; x <= 3; x++){
-           if(askQuestion()==true){}
+        for(int x = 0; x < 3; x++){
+           if(askQuestion()==true){
            correctTotal++;
         }
-        return correctTotal;
     }
+    return correctTotal;
+}
 }
