@@ -14,6 +14,7 @@ public class Main {
         //If the player got into ending 1 run the quiz.
 
         if(introEnding==1){
+            System.out.println("Alrighty then let's see here...\nAha here's my question sheet!\n\n----------------------------------------------------\n");
             result = q.quiz();
             //Based on their quiz result grab their sub ending.
             q.questionsP2(result);
