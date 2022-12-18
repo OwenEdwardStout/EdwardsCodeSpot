@@ -1,10 +1,13 @@
 import java.util.Scanner;
 public class Questions {
+    //Initialize
     Scanner sc = new Scanner(System.in);
     
+    //Ask question function should ask a Java based question and return true if it was correct and false if it was wrong.
     public boolean askQuestion(){
-    System.out.println("\n-------------------------------------------------------------");
+    //Sets accepted input as false so that the code expectedly reruns the while statements else section endlessley when the user inputs an answer other than yes or no.
     boolean acceptedInput = false;
+    //rolls randomly for one of the 10 questions asks it grabs an answer from the user then returns true if the users answer was correct and false if it was incorrect.
     int questionChoice = (int) (Math.random()*10);
     boolean answer = false;
     if(questionChoice == 0){
@@ -136,7 +139,10 @@ public class Questions {
                                         }}}
 return answer;
 }
+
+//questionsP2 should give one of 3 random fortunes based on the number of correct answers given durring the quiz.
 public void questionsP2(int x){
+    //answer is only used for the last ending to interupt the fortune teller
     String answer;
     int fortune = (int) (Math.random()*3);
     if(x==0){
@@ -172,6 +178,8 @@ public void questionsP2(int x){
         System.out.println("Don't interrupt me mortal! I'm not done speaking yet. You think I'm simply a fortune teller subject to the whims of my wealth? §bIGjAVAcORP§™ doesn't own me, I own §bIGjAVAcORP§™! I am a god! You are nothing! You will follow me as my acolyte! Dilligently pounding away at your keyboard while I laugh! Class after class object after object you will pledge yourself to me as I build my eternal hegemony! Bow to me! None can stop the march of progress! HAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHHAHAHAHAHHAHAHAHAHHAHAHAHAHAHAHHAHAAHAHAHAHHAHAHAHAHAHAHHAHAHAHAHHAHAHAHAHHAHAHAHAHHAHAHAHAHHAHAAHAHHA*cough*HAHA");
     }
 }
+    //Quiz should run the question method three times and return the number of times it was true
+    
     public int quiz(){
         int correctTotal = 0;
         for(int x = 0; x < 3; x++){

@@ -1,10 +1,13 @@
 import java.util.Scanner;
 public class FortuneTeller {
-    
+
+    //Initialize
     Scanner sc = new Scanner(System.in);
     String answer;
+
+    //Intro script - Gives player premise and allows them to pace their reading by requiring input to continue after a few lines.
     public int introScript1(){
-        System.out.println("\n\n\n--------------------------------------------------------------------------------\nHello weary traveler! Please take some time to rest your head. Allow me to read into your future...\n(Enter to continue)");
+        System.out.println("\n--------------------------------------------------------------------------------\nHello weary traveler! Please take some time to rest your head. Allow me to read into your future...\n(Enter to continue)");
         answer = sc.nextLine();
         System.out.println("Alright traveler, I have a proposition to make. Just so that I can get as accurate a fortune for you as possible. I'll ask you quesitons and you respond. Depending on your response I'll be able to give you the best read possible. Is that fine?");
         answer = sc.nextLine();
@@ -14,6 +17,9 @@ public class FortuneTeller {
         answer = sc.nextLine();
         System.out.println("I'm a shill for §bIGjAVAcORP§™. I'm not proud of it, but I'll have to ask some Java related questions. ok?");
         answer = sc.nextLine();
+
+        //Resturns ending to introduction based on users response to the question. 1 is the answer "yes" or "Yes" and continues the game, "no" or "No" end it, and any other response gets an ending where the fortune teller calls you a dingus for failing to answer yes or no.
+
         if(answer.equals("yes")||answer.equals("Yes")){
             return 1;
         }else
