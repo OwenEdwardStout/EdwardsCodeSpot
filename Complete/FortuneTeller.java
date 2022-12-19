@@ -1,3 +1,4 @@
+package Complete;
 import java.util.Scanner;
 public class FortuneTeller {
 
