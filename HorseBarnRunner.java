@@ -5,6 +5,10 @@ public class HorseBarnRunner
 {
   public static void main(String[] args)
   {
-    /* your code here */
+    //Initialize instances and variables
+    HorseBarn riverside = new HorseBarn();
+    System.out.println(riverside.getSpaces());
+    RandomPermutation perm = new RandomPermutation();
+    System.out.println(perm.next(8));
   }
 } 
