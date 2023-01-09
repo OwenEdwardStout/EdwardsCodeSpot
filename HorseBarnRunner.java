@@ -9,6 +9,6 @@ public class HorseBarnRunner
     HorseBarn riverside = new HorseBarn();
     System.out.println(riverside.getSpaces());
     RandomPermutation perm = new RandomPermutation();
-    System.out.println(perm.next(8));
+    System.out.println(perm.next(8)[1]);
   }
 } 
