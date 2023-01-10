@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import javax.lang.model.util.ElementScanner6;
-
 /*
  * Activity 3.7.3
  */
@@ -21,15 +19,17 @@ public class HorseBarnRunner
     HorseList.add("Pokemon Gopher");
     HorseList.add("Roblox");
     HorseList.add("Modern Warfare");
+    HorseList.add("Fifa 2007");
 
     ArrayList<String> HorseRandom = new ArrayList<String>();
+    while(HorseList.size()>0){
     if((int)(Math.random()*HorseList.size())==0){
       HorseRandom.add(HorseList.get(0));
       HorseList.remove(0); } else 
       if((int)(Math.random()*HorseList.size())==1){
         HorseRandom.add(HorseList.get(1));
         HorseList.remove(1); } else
-      if((int)(Math.random()*HorseList.size())==2){
+       if((int)(Math.random()*HorseList.size())==2){
           HorseRandom.add(HorseList.get(2));
           HorseList.remove(2); } else
           if((int)(Math.random()*HorseList.size())==3){
@@ -53,11 +53,20 @@ public class HorseBarnRunner
                       if((int)(Math.random()*HorseList.size())==9){
                         HorseRandom.add(HorseList.get(9));
                         HorseList.remove(9); } 
-
-              HorseBarn riverside = new HorseBarn();
+                      }
+                      HorseRandom.remove((0));
+    
     System.out.println("\nWelcome to the barn! Here are your horses\n-------------------------");
-    System.out.println(riverside.getSpaces());
-    RandomPermutation perm = new RandomPermutation();
-    System.out.println(perm.next(8)[1]);
+
+    while(HorseRandom.size()>=2){
+      System.out.println(HorseRandom.get(0)+ " and " + HorseRandom.get(1));
+      HorseRandom.remove(0);
+      HorseRandom.remove(0);
+    }
+    if(HorseRandom.size()==1){
+      System.out.print(HorseRandom.get(0) + " is alone :(");
+    } else {System.out.print("No horses alone!");}
+
+
   }
 } 
